@@ -1,7 +1,22 @@
+import React, { useEffect, useState } from 'react';
+import TreasuryOverviewLoading from '../components/TreasuryOverviewLoading';
+
 export default function Dashboard() {
+  // `loading` reflects when treasury data is being fetched.
+  // Replace this hook with your real data-loading flag when integrating.
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Demo: simulate async fetch — remove when wiring real fetch.
+    const t = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (loading) return <TreasuryOverviewLoading />;
+
   return (
     <div>
-      <h1 style={{ marginTop: 0 }}>Dashboard</h1>
+      <h1 style={{ marginTop: 0 }}>Treasury overview</h1>
       <p style={{ color: 'var(--muted)' }}>
         Treasury overview and active stream summary. Connect your wallet to see real-time capital flow.
       </p>
