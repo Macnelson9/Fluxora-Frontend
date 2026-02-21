@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from "react-router-dom";
 
 export default function Layout() {
   return (
@@ -6,9 +6,15 @@ export default function Layout() {
       <aside style={styles.sidebar}>
         <div style={styles.logo}>Fluxora</div>
         <nav style={styles.nav}>
-          <Link to="/" style={styles.navLink}>Dashboard</Link>
-          <Link to="/streams" style={styles.navLink}>Streams</Link>
-          <Link to="/recipient" style={styles.navLink}>Recipient</Link>
+          <Link to="/dashboard" style={styles.navLink}>
+            Dashboard
+          </Link>
+          <Link to="/streams" style={styles.navLink}>
+            Streams
+          </Link>
+          <Link to="/recipient" style={styles.navLink}>
+            Recipient
+          </Link>
         </nav>
       </aside>
       <main style={styles.main}>
@@ -20,35 +26,35 @@ export default function Layout() {
 
 const styles: Record<string, React.CSSProperties> = {
   layout: {
-    display: 'flex',
-    minHeight: '100vh',
+    display: "flex",
+    minHeight: "100vh",
   },
   sidebar: {
     width: 220,
-    background: 'var(--surface)',
-    borderRight: '1px solid var(--border)',
-    padding: '1.5rem 1rem',
+    background: "var(--surface)",
+    borderRight: "1px solid var(--border)",
+    padding: "1.5rem 1rem",
   },
   logo: {
-    fontSize: '1.25rem',
+    fontSize: "1.25rem",
     fontWeight: 700,
-    color: 'var(--accent)',
-    marginBottom: '2rem',
+    color: "var(--accent)",
+    marginBottom: "2rem",
   },
   nav: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.25rem',
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.25rem",
   },
   navLink: {
-    padding: '0.6rem 0.75rem',
+    padding: "0.6rem 0.75rem",
     borderRadius: 8,
-    color: 'var(--text)',
-    textDecoration: 'none',
+    color: "var(--text)",
+    textDecoration: "none",
   },
   main: {
     flex: 1,
-    padding: '2rem',
-    overflow: 'auto',
+    padding: "2rem",
+    overflow: "auto",
   },
 };
