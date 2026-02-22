@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     // Demo: simulate async fetch — remove when wiring real fetch.
-    const t = setTimeout(() => setLoading(false), 1500);
+    const t = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(t);
   }, []);
 
