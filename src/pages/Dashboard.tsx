@@ -34,9 +34,29 @@ export default function Dashboard() {
           <div style={cardValue}>— USDC</div>
         </div>
       </div>
+
+      <CreateStreamModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 }
+
+const createBtnStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  background: 'var(--accent)',
+  color: '#ffffff',
+  border: 'none',
+  padding: '0.625rem 1.25rem',
+  borderRadius: '8px',
+  fontWeight: 600,
+  fontSize: '1rem',
+  cursor: 'pointer',
+  boxShadow: '0 4px 24px rgba(0, 212, 170, 0.4)',
+};
 
 const cardGrid: React.CSSProperties = {
   display: 'grid',
