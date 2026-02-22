@@ -80,7 +80,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  background: var(--accent);
+  background: var(--primary);
   width: 50%;
 }
 
@@ -109,14 +109,14 @@
 }
 
 .step-item.completed .step-circle {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--primary);
+  border-color: var(--primary);
   color: var(--text);
 }
 
 .step-item.active .step-circle {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--primary);
+  border-color: var(--primary);
   color: var(--text);
 }
 
@@ -223,8 +223,6 @@
   outline: none;
   min-width: 0;
 }
-
-
 
 .select-chevron {
   position: absolute;
@@ -357,6 +355,6 @@
 }
 
 .btn-next {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--primary);
+  color: var(--text);
 }
