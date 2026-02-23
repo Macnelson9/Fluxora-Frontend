@@ -91,6 +91,7 @@ export default function App() {
             </>
           }
         />
+        <Route path="connect-wallet" element={<ConnectWallet />} />
         <Route path="/app" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="streams" element={<Streams />} />
