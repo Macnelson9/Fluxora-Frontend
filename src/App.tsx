@@ -6,6 +6,7 @@ import Streams from "./pages/Streams";
 import Recipient from "./pages/Recipient";
 import Landing from "./pages/Landing";
 import Navbar from "./components/Navbar";
+import ConnectWallet from "./pages/ConnectWallet";
 
 export default function App() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -86,6 +87,7 @@ export default function App() {
             </>
           }
         />
+        <Route path="connect-wallet" element={<ConnectWallet />} />
         <Route path="/app" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="streams" element={<Streams />} />
